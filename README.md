@@ -75,30 +75,8 @@ An Android alarm clock application that requires you to take a photo of a specif
 - Java 11+
 
 ## 🏗️ Project Structure
+<img width="300" height="555" alt="Screenshot 2026-06-30 at 7 05 07 PM" src="https://github.com/user-attachments/assets/b57b6d77-00ac-410e-ad9e-8776d5e5cb87" />
 
-ChAlarm/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/example/chalarm/
-│   │   │   │   ├── MainActivity.java
-│   │   │   │   ├── AddObjectActivity.java
-│   │   │   │   ├── AlarmScreenActivity.java
-│   │   │   │   ├── AlarmService.java
-│   │   │   │   ├── AlarmReceiver.java
-│   │   │   │   ├── AlarmManagerHelper.java
-│   │   │   │   ├── ImageMatcher.java
-│   │   │   │   ├── ObjectManager.java
-│   │   │   │   ├── EmergencyPinActivity.java
-│   │   │   │   └── BootReceiver.java
-│   │   │   └── res/
-│   │   │       ├── layout/
-│   │   │       ├── values/
-│   │   │       └── AndroidManifest.xml
-│   └── build.gradle.kts
-├── build.gradle.kts
-├── settings.gradle.kts
-└── gradle.properties
 
 ## 🎯 Future Improvements
 
