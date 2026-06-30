@@ -6,12 +6,13 @@ An Android alarm clock application that requires you to take a photo of a specif
 
 ## 📱 Features
 
-- **Custom Object Setup**: Register up to 15 household objects with photos and labels
+- **Custom Object Setup**: Register household objects with photos and labels
 - **Smart Alarm Triggering**: Alarm fires at exact scheduled time using Android's AlarmManager
 - **Random Morning Challenge**: Each alarm randomly selects one registered object for verification
-- **Photo Matching Verification**: Captures and compares photos using pixel-matching algorithm
-- **Full-Screen Alarm Mode**: Blocks navigation buttons to ensure you get out of bed
+- **Photo Matching Verification**: Captures and compares photos using an image-matching algorithm
+- **Full-Screen Alarm Mode**: Blocks navigation buttons until the alarm is dismissed
 - **Emergency PIN**: Backup dismissal method for emergencies
+- **Future Snooze Support**: Planned snooze functionality for later releases
 
 ## 🛠️ Technical Architecture
 
@@ -32,20 +33,20 @@ An Android alarm clock application that requires you to take a photo of a specif
 ## 📸 How It Works
 
 1. **Setup Phase**:
-    - Take photos of household objects (e.g., coffee maker, TV, bathroom sink)
-    - Add custom labels for each object
-    - Minimum 5 objects required to set an alarm
+   - Take photos of household objects
+   - Add custom labels for each object
+   - Register objects for use in alarms
 
 2. **Alarm Phase**:
-    - Set alarm time
-    - When alarm triggers, app randomly selects one registered object
-    - Full-screen alarm shows the object label (e.g., "Take a picture of: Coffee Maker")
-    - User must take a matching photo to dismiss the alarm
+   - Set alarm time
+   - When the alarm triggers, the app randomly selects one registered object
+   - Full-screen alarm shows the object label
+   - User must take a matching photo to dismiss the alarm
 
 3. **Verification**:
-    - App compares morning photo with reference image
-    - 75% similarity threshold required for dismissal
-    - Failed attempts prompt user to try again (better lighting, closer, etc.)
+   - App compares the captured photo with the reference image
+   - A similarity threshold is required for dismissal
+   - Failed attempts prompt the user to retry
 
 ## 🔐 Permissions
 
@@ -53,7 +54,7 @@ An Android alarm clock application that requires you to take a photo of a specif
 - `SCHEDULE_EXACT_ALARM` / `USE_EXACT_ALARM` - Precision timing
 - `CAMERA` - Capture setup and morning photos
 - `FOREGROUND_SERVICE` / `FOREGROUND_SERVICE_MEDIA_PLAYBACK` - Background alarm playback
-- `WAKE_LOCK` and `DISABLE_KEYGUARD` - Turn on screen and bypass lock screen
+- `WAKE_LOCK` and `DISABLE_KEYGUARD` - Turn on screen and bypass the lock screen
 - `VIBRATE` - Alarm vibration
 
 ## 🚀 Installation
@@ -61,23 +62,20 @@ An Android alarm clock application that requires you to take a photo of a specif
 1. Clone the repository:
    ```bash
    git clone https://github.com/charlespura/ChAlarm.git
-Open project in Android Studio
+   ```
+2. Open the project in Android Studio
+3. Build and run on an Android 11+ device or emulator
+4. Grant permissions when prompted
 
-Build and run on Android 11+ device or emulator
+### Requirements
 
-Grant necessary permissions when prompted
+- Android Studio 2024.2.1 or later
+- Android SDK 34
+- Gradle 8.7
+- Java 11+
 
-📝 Requirements
-Android Studio Ladybug (2024.2.1) or later
+## 🏗️ Project Structure
 
-Android SDK 34
-
-Gradle 8.7
-
-Java 11+
-
-🏗️ Project Structure
-text
 ChAlarm/
 ├── app/
 │   ├── src/
@@ -101,36 +99,19 @@ ChAlarm/
 ├── build.gradle.kts
 ├── settings.gradle.kts
 └── gradle.properties
-🎯 Future Improvements
-Support for multiple alarm schedules
 
-Snooze functionality
+## 🎯 Future Improvements
 
-Cloud backup for object images
+- Support for multiple alarm schedules
+- Snooze functionality
+- Cloud backup for object images
+- Voice assistant integration
+- Analytics and statistics
 
-Voice assistant integration
-
-Analytics and statistics
-
-📄 License
+## 📄 License
 This project is open source and available under the MIT License.
 
-👤 Author
+## 👤 Author
 Charles Pura
 
 GitHub: @charlespura
-
-🤝 Contributing
-Contributions, issues, and feature requests are welcome!
-
-Made with ❤️ for better mornings ☀️
-
-text
-
-## After Creating README.md
-
-```bash
-# Add and push the README
-git add README.md
-git commit -m "Add README.md"
-git push -u origin main
