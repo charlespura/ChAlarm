@@ -1,5 +1,4 @@
-Complete README.md Content (Copy and Paste):
-markdown
+
 # ChAlarm - Photo-Matching Alarm Clock
 
 An Android alarm clock application that requires you to take a photo of a specific household object to turn off the alarm. Built with Java and Android Studio.
